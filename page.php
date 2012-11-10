@@ -20,8 +20,8 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header(); ?>
 
-        <div id="content" class="grid col-460">
-        
+        <div id="contentbox" class="grid col-460">
+        <div id="content">
 <?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
@@ -81,9 +81,8 @@ if ( !defined('ABSPATH')) exit;
         <?php get_search_form(); ?>
 
 <?php endif; ?>  
-      
         </div><!-- end of #content -->
-
+       </div><!-- end of #contentbox -->
 <?php get_sidebar('left'); ?>
 <?php get_sidebar('right'); ?>
 <?php get_footer(); ?>
