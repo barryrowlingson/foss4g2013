@@ -72,13 +72,11 @@ The Open Source Geospatial Foundation
 
     
     <?php get_sidebar('top'); ?>
-			    
 				<?php wp_nav_menu(array(
 				    'container'       => '',
 					'theme_location'  => 'header-menu')
 					); 
 				?>
-                
             <?php if (has_nav_menu('sub-header-menu', 'responsive')) { ?>
 	            <?php wp_nav_menu(array(
 				    'container'       => '',

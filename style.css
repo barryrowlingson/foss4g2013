@@ -1254,7 +1254,7 @@ form div {
 	margin: 1em;
 	height: 88px;
 	width: 150px;
-	background-image: url(/wordpress/wp-content/uploads/2012/11/foss4g2013-trans-150.png);
+	background-image: url(images/foss4g2013-trans-150.png);
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	white-space: nowrap;
@@ -1270,7 +1270,6 @@ margin-right: 1em;}
 #blurbsub {font-style: italic}
 
 #osgeo {
-    x-background-image: url(/wordpress/wp-content/uploads/2012/11/osgeologo.png);
     background-image: url(images/osgeologo.png);
     background-repeat: no-repeat;
     height: 117px;
