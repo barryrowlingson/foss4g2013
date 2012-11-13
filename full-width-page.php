@@ -23,7 +23,6 @@ if ( !defined('ABSPATH')) exit;
 
       <div id="contentbox" vlass="grid col-940">
         <div id="content-full">
-        <h1>FULL PAGE</h1>
 <?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
