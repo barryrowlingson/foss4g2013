@@ -83,6 +83,6 @@ if ( !defined('ABSPATH')) exit;
 <?php endif; ?>  
         </div><!-- end of #content -->
        </div><!-- end of #contentbox -->
-<?php get_sidebar('left'); ?>
 <?php get_sidebar('right'); ?>
+<?php get_sidebar('left'); ?>
 <?php get_footer(); ?>
