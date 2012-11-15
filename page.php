@@ -20,51 +20,49 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header(); ?>
 
-        <div id="contentbox" class="grid col-460">
-        <div id="content">
-<?php if (have_posts()) : ?>
-
-		<?php while (have_posts()) : the_post(); ?>
+<div id="contentbox" class="grid col-460">
+  <div id="content">
+    <?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+    <?php $options = get_option('responsive_theme_options'); ?>
+    <?php if ($options['breadcrumb'] == 0): ?>
+      <?php echo responsive_breadcrumb_lists(); ?>
+    <?php endif; ?>
         
-        <?php $options = get_option('responsive_theme_options'); ?>
-		<?php if ($options['breadcrumb'] == 0): ?>
-		<?php echo responsive_breadcrumb_lists(); ?>
-        <?php endif; ?>
-        
-            <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <h1 class="post-title"><?php the_title(); ?></h1>
+    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <h1 class="post-title"><?php the_title(); ?></h1>
  
-                <?php if ( comments_open() ) : ?>               
-                <div class="post-meta">
-                <?php responsive_post_meta_data(); ?>
+      <?php if ( comments_open() ) : ?>               
+      <div class="post-meta">
+        <?php responsive_post_meta_data(); ?>
+        
+	<?php if ( comments_open() ) : ?>
+        <span class="comments-link">
+          <span class="mdash">&mdash;</span>
+	  <?php comments_popup_link(__('No Comments &darr;', 'responsive'), __('1 Comment &darr;', 'responsive'), __('% Comments &darr;', 'responsive')); ?>
+        </span>
+        <?php endif; ?> 
+      </div><!-- end of .post-meta -->
+      <?php endif; ?> 
                 
-				    <?php if ( comments_open() ) : ?>
-                        <span class="comments-link">
-                        <span class="mdash">&mdash;</span>
-                    <?php comments_popup_link(__('No Comments &darr;', 'responsive'), __('1 Comment &darr;', 'responsive'), __('% Comments &darr;', 'responsive')); ?>
-                        </span>
-                    <?php endif; ?> 
-                </div><!-- end of .post-meta -->
-                <?php endif; ?> 
+      <div class="post-entry">
+        <?php the_content(__('Read more &#8250;', 'responsive')); ?>
+        <?php wp_link_pages(array('before' => '<div class="pagination">' . __('Pages:', 'responsive'), 'after' => '</div>')); ?>
+      </div><!-- end of .post-entry -->
                 
-                <div class="post-entry">
-                    <?php the_content(__('Read more &#8250;', 'responsive')); ?>
-                    <?php wp_link_pages(array('before' => '<div class="pagination">' . __('Pages:', 'responsive'), 'after' => '</div>')); ?>
-                </div><!-- end of .post-entry -->
-                
-                <?php if ( comments_open() ) : ?>
-                <div class="post-data">
-				    <?php the_tags(__('Tagged with:', 'responsive') . ' ', ', ', '<br />'); ?> 
-                    <?php the_category(__('Posted in %s', 'responsive') . ', '); ?> 
-                </div><!-- end of .post-data -->
-                <?php endif; ?>             
+      <?php if ( comments_open() ) : ?>
+      <div class="post-data">
+	<?php the_tags(__('Tagged with:', 'responsive') . ' ', ', ', '<br />'); ?> 
+        <?php the_category(__('Posted in %s', 'responsive') . ', '); ?> 
+      </div><!-- end of .post-data -->
+      <?php endif; ?>             
+      
+      <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
+    </div><!-- end of #post-<?php the_ID(); ?> -->
             
-            <div class="post-edit"><?php edit_post_link(__('Edit', 'responsive')); ?></div> 
-            </div><!-- end of #post-<?php the_ID(); ?> -->
+    <?php comments_template( '', true ); ?>
             
-            <?php comments_template( '', true ); ?>
-            
-        <?php endwhile; ?> 
+    <?php endwhile; ?> 
         
         <?php if (  $wp_query->max_num_pages > 1 ) : ?>
         <div class="navigation">
@@ -83,6 +81,6 @@ if ( !defined('ABSPATH')) exit;
 <?php endif; ?>  
         </div><!-- end of #content -->
        </div><!-- end of #contentbox -->
-<?php get_sidebar('right'); ?>
 <?php get_sidebar('left'); ?>
+<?php get_sidebar('right'); ?>
 <?php get_footer(); ?>
