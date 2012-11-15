@@ -1,3 +1,4 @@
+<?php
 function image_shortcode($atts, $content = null) {
     extract( shortcode_atts( array(
     'name' => '',
@@ -20,3 +21,4 @@ function image_shortcode($atts, $content = null) {
     }
 }
 add_shortcode('image','image_shortcode');
+?>
