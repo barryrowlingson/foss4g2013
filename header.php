@@ -59,13 +59,13 @@ if ( !defined('ABSPATH')) exit;
     <?php responsive_in_header(); // header hook ?>
    
                
-        <div id="logo">
+        <a href="<?php echo get_home_url(); ?> "><div id="logo">
 FOSS4G 2013 Nottingham
 </div>
 <div id="blurb">
 <div id="blurbmain">Free and Open Source Software for Geospatial</div>
 <div id="blurbsub">East Midlands Conference Centre, Nottingham, UK, 17th - 21st September</div>
-</div>
+</div></a>
 <!--div id="osgeo">
 The Open Source Geospatial Foundation
 </div-->
