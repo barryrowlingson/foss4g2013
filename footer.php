@@ -75,6 +75,7 @@ foreach ($levels as $level) {
         <div class="grid col-940">
         
         <div class="grid col-540">
+<h4>FOSS4G is an OSGeo Production</h4>
 <div id="osgeo">FOSS4G is an OSGeo Conference</div>
 <!-- end of col-540 -->
 </div>
