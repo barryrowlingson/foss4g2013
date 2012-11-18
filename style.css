@@ -115,23 +115,25 @@ html {
 }
 
 body {
-	-moz-font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
-	background: #efefef;
-	color: #404040;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	font-smoothing: antialiased;
-	line-height: 1.5em;
-	text-rendering: optimizeLegibility;
-background-attachment: fixed;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    background: #efefef;
+    color: #404040;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-smoothing: antialiased;
+    line-height: 1.5em;
+    text-rendering: optimizeLegibility;
+    /*background-attachment: fixed;  */
     background-clip: border-box;
     background-color: #E2E2E2;
-    background-image: url("./images/nottingham_bg_map.jpg");
+    /* background-image: url("./images/nottingham_bg_map.jpg");*/
+    background-image: url(images/back2.jpg);
+
     background-origin: padding-box;
     background-position: 0 0;
-    background-repeat: repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
+    /* background-size: cover; */
 }
 }
 
@@ -1254,7 +1256,7 @@ form div {
 	margin: 1em;
 	height: 117px;
 	width: 200px;
-	background-image: url(images/foss4g2013-trans-200.png);
+	background-image: url(images/foss4g2013-trans-200.png); 
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	white-space: nowrap;
@@ -1414,7 +1416,7 @@ margin-right: 1em;}
 	background-color: #fff;
 	border: 1px solid #d6d6d6;
 	border-radius: 6px;
-	padding-bottom: 40px;
+	padding-bottom: 0.3em;
 	width: 99.893617021277%;
 }
 
@@ -1649,9 +1651,16 @@ margin-right: 1em;}
 .featured-title {
 	font-size:  60px;
 	letter-spacing: -1px;
-	margin:  0;
-	padding-top: 40px;
+
+	margin-top: 0.3em;
+	/* padding-top: 40px; */
 	text-align: center;
+	text-indent: -9999px;
+	white-space: nowrap;
+	background-image: url(images/foss4g2013-trans-300.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	height: 176px;
 }
 
 .featured-subtitle {
