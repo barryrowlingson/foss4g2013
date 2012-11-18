@@ -76,7 +76,7 @@ if ( !defined('ABSPATH')) exit;
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if headline was set
 			    if (!empty($options['cta_url']) && $options['cta_text']) {
-					echo '<a href="'.$options['cta_url'].'" class="blue button">'; 
+					echo '<a href="'.home_url().'/about-foss4g/'.'" class="green button">'; 
 					echo $options['cta_text'];
 				    echo '</a>';
 			// If not display dummy headline for preview purposes
