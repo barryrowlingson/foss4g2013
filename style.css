@@ -124,15 +124,15 @@ body {
     font-smoothing: antialiased;
     line-height: 1.5em;
     text-rendering: optimizeLegibility;
-    /*background-attachment: fixed;  */
+    background-attachment: fixed;  
     background-clip: border-box;
     background-color: #E2E2E2;
     /* background-image: url("./images/nottingham_bg_map.jpg");*/
-    background-image: url(images/back2.jpg);
+    background-image: url(images/back5.png);
 
     background-origin: padding-box;
     background-position: 0 0;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     /* background-size: cover; */
 }
 }
@@ -1267,7 +1267,9 @@ form div {
     padding-top: 3em;
     color: #057937;
     font-weight:700;
-margin-right: 1em;}
+    margin-right: 1em;
+    height: 117px /* match the logo */
+}
 #blurbmain {font-size: 200%; line-height: 1.1em;}
 #blurbsub {font-style: italic}
 
