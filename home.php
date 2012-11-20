@@ -23,10 +23,8 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header("notop"); ?>
 
-        <div id="featured" class="grid col-940">
-        
-        <div class="grid col-460">
-
+        <div id="contentbox" class="grid col-460">
+           <div id="content">
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if headline was set
 			    if ($options['home_headline']) {
@@ -89,10 +87,16 @@ if ( !defined('ABSPATH')) exit;
             
             </div><!-- end of .call-to-action -->
             <?php endif; ?>         
-            
+          </div>
         </div><!-- end of .col-460 -->
 
-        <div id="featured-image" class="grid col-460 fit"> 
+	<div id="featured-one" class="grid col-220" style="outline: 1px solid red">
+	    <div class="widget-wrapper">
+	   <h3>Stuff here</h3>
+	    </div>
+	</div>
+
+        <div id="featured-two" class="grid col-220 fit" style="outline: 1px solid blue"> 
                            
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if image was set
@@ -107,6 +111,6 @@ if ( !defined('ABSPATH')) exit;
         </div><!-- end of #featured-image --> 
         
         </div><!-- end of #featured -->
-               
+
 <?php get_sidebar('home'); ?>
 <?php get_footer(); ?>
