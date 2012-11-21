@@ -23,22 +23,52 @@ function image_shortcode($atts, $content = null) {
 add_shortcode('image','image_shortcode');
 
 function sponsorlist_shortcode($atts,$content=null){
+  return sponsors_in(array("Platinum","Gold"));
+}
+
+function sponsorlist_levels($atts,$content=null){
+  extract( shortcode_atts( array(
+				 'levels' => 'Diamond,Platinum,Gold',
+				 ), $atts ) );
+  $levels = explode(",",$levels);
+  return sponsors_in($levels);
+}
+add_shortcode("sponsorlistlevels","sponsorlist_levels");
+
+function sponsors_in($levels){
+
   $tops = Foss4g::topsponsors();
   
-  $output="<ul>";
+  $output = "";
   
-  foreach (array("Diamond","Platinum","Gold") as $level){
-    $output .= "<li class=\"level ".$level."\">";
-    $output .= $level." Sponsors";
-    $output.="<ul class=\"sponsors\">";
-    foreach ($tops[$level] as $sponsor){
-      $output.="<li class=\"sponsor\">".$sponsor->post_title."</li>";
+  $output .= "<div class=\"widget-wrapper sponsors\">";
+  //$output .= "<div class=\"widget-title-home\"><h3>Sponsors</h3></div>";
+  foreach ($levels as $level){
+    $sponsorset = $tops[$level];
+    if(count($sponsorset) > 0){
+      if(count($sponsorset)>1){
+	$word="sponsors";
+      }else{
+	$word="sponsor";
+      }
+      $output .= "<h4>".$level." ".$word."</h4>"; 
+      foreach ($tops[$level] as $sponsor){
+	$html = get_the_post_thumbnail(
+	       $sponsor->ID,
+	       array(75,75),
+	       array(
+		     'alt' => $sponsor->post_title,
+		     'title' => $sponsor->post_title,
+		     'style' => "display:inline",
+		     'class' => $level
+		     )
+				       );
+	$output.="<div class=\"sponsor\">".$html."</div>";
+      };
     };
-    $output.="</ul>";
-
-    $output .="</li>";
   };
   
+  $output .="</div>";
 
   return $output;
 

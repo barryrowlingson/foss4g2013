@@ -60,6 +60,8 @@ body {
 	line-height: 1;
 }
 
+
+
 ol, ul {
 	list-style: none;
 }
@@ -1418,7 +1420,7 @@ form div {
 	background-color: #fff;
 	border: 1px solid #d6d6d6;
 	border-radius: 6px;
-	padding-bottom: 0.3em;
+	padding-bottom: 1em;
 	width: 99.893617021277%;
 }
 
@@ -2670,7 +2672,7 @@ BDO[DIR="rtl"] {
 }
 
 /* =Responsive (Mobile) Design
--------------------------------------------------------------- */
+-------------------------------------------------------------- 
 @media screen and (max-width: 880px) {
 
     body {}
@@ -2694,7 +2696,7 @@ BDO[DIR="rtl"] {
     }
     
 }
-
+*/
 @media screen and (max-width: 650px) {
 
     body {}
@@ -2881,5 +2883,28 @@ BDO[DIR="rtl"] {
         text-align: center;
     }
 }
+
+/* sponsor block styling */
+
+.sponsors { background-image: none; padding-bottom: 0.5em; }
+
+.sponsors h4 {margin-top: 0;  }
+
+.sponsors div.sponsor { display:inline; }
+
+.sponsor-Diamond { 
+    background-image: url(images/diamond1.png); 
+ }
+
+.sponsor img { 
+     margin-top: 0;
+     margin-right: 2px;
+     border-width: 4px;
+     border-style: solid;}
+
+.sponsor img.Platinum { 
+                        border-color: black #222 #666 #AAA;
+                        }
+.sponsor img.Gold { border-color: yellow yellow gold gold ; }
 
 /*The last 29 days of the month are the hardest."- Nikola Tesla*/

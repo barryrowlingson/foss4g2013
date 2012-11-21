@@ -23,8 +23,14 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header("notop"); ?>
 
+	<div id="featured-one" class="grid col-220" >
+	    <?php echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum]'); ?>
+	</div>
+
+
+
         <div id="contentbox" class="grid col-460">
-           <div id="content">
+           <div id="featured">
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if headline was set
 			    if ($options['home_headline']) {
@@ -90,13 +96,7 @@ if ( !defined('ABSPATH')) exit;
           </div>
         </div><!-- end of .col-460 -->
 
-	<div id="featured-one" class="grid col-220" style="outline: 1px solid red">
-	    <div class="widget-wrapper">
-	   <h3>Stuff here</h3>
-	    </div>
-	</div>
-
-        <div id="featured-two" class="grid col-220 fit" style="outline: 1px solid blue"> 
+        <div id="featured-two" class="grid col-220 fit" > 
                            
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if image was set
