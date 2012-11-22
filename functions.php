@@ -47,7 +47,7 @@ function sponsors_in($levels,$widget){
   
   $output = "";
   if($widget){
-    $output .= "<div class=\"widget-wrapper sponsors\">";
+    $output .= "<div class=\"sponsors\">";
   };
   //$output .= "<div class=\"widget-title-home\"><h3>Sponsors</h3></div>";
   foreach ($levels as $level){
@@ -139,10 +139,10 @@ function my_register_sidebars() {
 			'id' => 'lefthome',
 			'name' => __( 'Homepage Left' ),
 			'description' => __( 'Left of the hero unit.' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="widget-wrapper homepage %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '',
-			'after_title' => ''
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
 		)
 	);
 
@@ -151,10 +151,10 @@ function my_register_sidebars() {
 			'id' => 'righthome',
 			'name' => __( 'Homepage Right' ),
 			'description' => __( 'Right of the hero unit.' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="widget-wrapper homepage %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '',
-			'after_title' => ''
+			'before_title' => '<h3>',
+			'after_title' => '</h3>'
 		)
 	);
 

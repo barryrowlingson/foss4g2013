@@ -130,10 +130,10 @@ body {
     background-clip: border-box;
     background-color: #E2E2E2;
     /* background-image: url("./images/nottingham_bg_map.jpg");*/
-    background-image: url(images/back5.png);
+    background-image: url(images/arrows.png);
 
     background-origin: padding-box;
-    background-position: 0 0;
+    background-position: left bottom;
     background-repeat: no-repeat;
     /* background-size: cover; */
 }
@@ -1304,7 +1304,7 @@ form div {
 -------------------------------------------------------------- */
 #content {
     background-color: white;
-
+background-color: rgba(255,255,255,0.9);
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border: 1px solid #d6d6d6;
@@ -1315,8 +1315,8 @@ form div {
     margin-bottom: 20px;
 }
 
-#content-full {   background-color: white;
-
+#content-full {  
+                background-color: rgba(255,255,255,0.9);
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border: 1px solid #d6d6d6;
@@ -1326,7 +1326,7 @@ form div {
 	margin-bottom: 20px;
 }
 
-#content-blog {   background-color: white;
+#content-blog {   background-color: rgba(255,255,255,0.9);
 
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -1522,7 +1522,6 @@ form div {
 	-webkit-border-radius: 6px;
     -moz-border-radius: 6px;
 	background-color: #f9f9f9;
-	background-image: url(images/targetquadLR.png);
 	background-repeat: no-repeat;
 	border: 1px solid #eee;
 	border-radius: 6px;
@@ -2886,9 +2885,11 @@ BDO[DIR="rtl"] {
 
 /* sponsor block styling */
 
-.sponsors { background-image: none; padding-bottom: 0.5em; }
 
-.sponsors h4 {margin-top: 0;  }
+div.homepage { background-image: none; padding-bottom: 0.5em; }
+
+div.homepage h4 {margin-top: 0;  }
+div.homepage h3 {margin-top: 0;  }
 
 .sponsors div.sponsor { display:inline; }
 
@@ -2921,6 +2922,7 @@ BDO[DIR="rtl"] {
      border-radius: 8px;
      padding: 0 1em;
      margin: 1em 1em 0 1em;
+     background-color: white;
 }
 
 /* search box */
