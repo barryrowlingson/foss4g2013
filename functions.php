@@ -110,5 +110,10 @@ return $items;
 add_filter('wp_nav_menu_items','add_search_to_wp_menu',10,2);
 
 
-
+function new_nav_menu_items($items) {
+	$homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
+	$items = $homelink . $items;
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'new_nav_menu_items' );
 ?>
