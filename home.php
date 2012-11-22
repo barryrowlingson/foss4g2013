@@ -24,7 +24,7 @@ if ( !defined('ABSPATH')) exit;
 <?php get_header("notop"); ?>
 
 	<div id="featured-one" class="grid col-220" >
-	    <?php echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum]'); ?>
+            <?php dynamic_sidebar( 'lefthome' ); ?>
 	</div>
 
 
@@ -97,17 +97,7 @@ if ( !defined('ABSPATH')) exit;
         </div><!-- end of .col-460 -->
 
         <div id="featured-two" class="grid col-220 fit" > 
-                           
-            <?php $options = get_option('responsive_theme_options');
-			// First let's check if image was set
-			    if (!empty($options['featured_content'])) {
-					echo do_shortcode($options['featured_content']);
-		    // If not display dummy image for preview purposes
-			      } else {             
-                    echo '<img class="aligncenter" src="'.get_stylesheet_directory_uri().'/images/featured-image.png" width="440" height="300" alt="" />'; 
- 				  }
-			?> 
-                                   
+			      <?php dynamic_sidebar( 'righthome' ); ?>        
         </div><!-- end of #featured-two --> 
         
 

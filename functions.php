@@ -29,19 +29,26 @@ function sponsorlist_shortcode($atts,$content=null){
 function sponsorlist_levels($atts,$content=null){
   extract( shortcode_atts( array(
 				 'levels' => 'Diamond,Platinum,Gold',
+				 'widget' => 'Yes',
 				 ), $atts ) );
   $levels = explode(",",$levels);
-  return sponsors_in($levels);
+  if($widget=="Yes"){
+    $widget=True;
+  }else{
+    $widget=False;
+  };
+  return sponsors_in($levels,$widget);
 }
 add_shortcode("sponsorlistlevels","sponsorlist_levels");
 
-function sponsors_in($levels){
+function sponsors_in($levels,$widget){
 
   $tops = Foss4g::topsponsors();
   
   $output = "";
-  
-  $output .= "<div class=\"widget-wrapper sponsors\">";
+  if($widget){
+    $output .= "<div class=\"widget-wrapper sponsors\">";
+  };
   //$output .= "<div class=\"widget-title-home\"><h3>Sponsors</h3></div>";
   foreach ($levels as $level){
     $sponsorset = $tops[$level];
@@ -51,6 +58,7 @@ function sponsors_in($levels){
       }else{
 	$word="sponsor";
       }
+      $output .= "<div class=\"level ".$level."\">";
       $output .= "<h4>".$level." ".$word."</h4>"; 
       foreach ($tops[$level] as $sponsor){
 	$url = $sponsor->url;
@@ -67,10 +75,12 @@ function sponsors_in($levels){
 				       );
 	$output.="<div class=\"sponsor\"><a description=\"".$desc."\" href=\"".$url."\">".$html."</a></div>";
       };
+      $output .= "</div>"; // end of level
     };
   };
-  
-  $output .="</div>";
+  if($widget){
+    $output .="</div>";
+  };
 
   return $output;
 
@@ -118,4 +128,39 @@ function new_nav_menu_items($items) {
 	return $items;
 }
 add_filter( 'wp_nav_menu_items', 'new_nav_menu_items' );
+
+add_action( 'widgets_init', 'my_register_sidebars' );
+
+function my_register_sidebars() {
+
+	/* Register the two homepage sidebars. */
+	register_sidebar(
+		array(
+			'id' => 'lefthome',
+			'name' => __( 'Homepage Left' ),
+			'description' => __( 'Left of the hero unit.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '',
+			'after_title' => ''
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'righthome',
+			'name' => __( 'Homepage Right' ),
+			'description' => __( 'Right of the hero unit.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '',
+			'after_title' => ''
+		)
+	);
+
+	/* Repeat register_sidebar() code for additional sidebars. */
+}
+
+add_filter('widget_text', 'do_shortcode');
+
 ?>

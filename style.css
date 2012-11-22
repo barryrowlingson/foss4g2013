@@ -2900,13 +2900,28 @@ BDO[DIR="rtl"] {
      margin-top: 0;
      margin-right: 2px;
      border-width: 4px;
-     border-style: solid;}
+     border-style: solid;
+     border-color: green;
+     border-radius: 8px;}
 
 .sponsor img.Platinum { 
-                        border-color: black #222 #666 #AAA;
-                        }
-.sponsor img.Gold { border-color: yellow yellow gold gold ; }
 
+                        }
+.sponsor img.Gold {
+
+}
+
+#footer div.sponsor  { display:inline; }
+#footer img {border: none; border-radius: 0; }
+#footer div.level { 
+                    display:inline; float:left;
+      border-width: 4px;
+     border-style: solid;
+     border-color: #e2e2e2;
+     border-radius: 8px;
+     padding: 0 1em;
+     margin: 1em 1em 0 1em;
+}
 
 /* search box */
 

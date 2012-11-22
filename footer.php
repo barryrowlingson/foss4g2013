@@ -27,48 +27,9 @@ if ( !defined('ABSPATH')) exit;
     <div id="footer-wrapper">
  
 <div class="grid col-940" >
-<h3>Sponsors</h3>
-<?php
 
-$levels = Conferencer::get_posts('sponsor_level');
-foreach ($levels as $id => $level) {
-  $levels[$id]->sponsors = array();
-}
-		
-foreach (Conferencer::get_posts('sponsor') as $sponsor) {
-  Conferencer::add_meta($sponsor);
-  $levels[$sponsor->level]->sponsors[$sponsor->ID] = $sponsor;
-}
+<?php echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum,Gold,Silver,Bronze,Supporter widget=No]'); ?>
 
-foreach ($levels as $id => $level) {
-  shuffle($levels[$id]->sponsors);
-}
-		
-/* $title = apply_filters( */
-/* 		       'widget_title', */
-/* 		       empty($instance['title']) ? 'Sponsors' : $instance['title'], */
-/* 		       $instance, */
-/* 		       $this->id_base */
-/* 		       ); */
-
-foreach ($levels as $level) { 
-  echo '<h4>'.$level->post_title.'</h4><ul>';
-  foreach ($level->sponsors as $sponsor){ 
-    $html = get_the_post_thumbnail(
-				   $sponsor->ID,
-				   array(75,75),
-				   array(
-					 'alt' => $sponsor->post_title,
-					 'title' => $sponsor->post_title,
-					 'style' => "display:inline"
-					 )
-				   );
-    echo $html;
-    //echo '<li>'.$sponsor->post_title.'</li>'; 
-  }; 
-  echo '</ul>';
-};
-?>
 </div>
    
         <div class="grid col-940">
