@@ -2907,4 +2907,24 @@ BDO[DIR="rtl"] {
                         }
 .sponsor img.Gold { border-color: yellow yellow gold gold ; }
 
+
+/* search box */
+
+.menu-item.menu-item-search { float:right; width:200px; }
+.menu-search-form { float:right; padding-top:3px; width:220px; }
+form.menu-search-form { width:auto; margin: auto 0; }
+form.menu-search-form #s { background:#fff; border:1px solid #000; font-size:11px; margin:0 2px 0 0; padding:2px; width:120px; float:left; }
+.menu-search-form input#searchsubmit.my-xwp-search { background:#000; color:#fff; cursor:pointer; float:right; padding:2px; }
+
+.menu-search-form input#searchsubmit { 
+background-color: #2E8B57;
+background-image: -moz-linear-gradient(center top , #4BC380, #2E8B57);
+border: 1px solid #1D5837;
+color: #FFFFFF;
+text-shadow: 0 1px 0 #1D5837;
+float: right;
+padding: 2px;
+margin-right: 0.5em;
+                                       }
+
 /*The last 29 days of the month are the hardest."- Nikola Tesla*/

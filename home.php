@@ -108,9 +108,9 @@ if ( !defined('ABSPATH')) exit;
  				  }
 			?> 
                                    
-        </div><!-- end of #featured-image --> 
+        </div><!-- end of #featured-two --> 
         
-        </div><!-- end of #featured -->
 
 <?php get_sidebar('home'); ?>
 <?php get_footer(); ?>
+

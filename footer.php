@@ -18,10 +18,9 @@ if ( !defined('ABSPATH')) exit;
  * @since          available since Release 1.0
  */
 ?>
-    </div><!-- end of #wrapper -->
+    </div> <!-- end of wrapper -->
     <?php responsive_wrapper_end(); // after wrapper hook ?>
-</div><!-- end of #container -->
-<?php responsive_container_end(); // after container hook ?>
+
 
 <div id="footer" class="clearfix">
 
@@ -160,6 +159,11 @@ foreach ($levels as $level) {
     </div><!-- end #footer-wrapper -->
     
 </div><!-- end #footer -->
+
+</div><!-- end of container -->
+<?php responsive_container_end(); // after container hook ?>
+
+
 
 <?php wp_footer(); ?>
 </body>

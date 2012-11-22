@@ -21,7 +21,7 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header(); ?>
 
-      <div id="contentbox" vlass="grid col-940">
+      <div id="contentbox" class="grid col-940">
         <div id="content-full">
 
 <?php if (have_posts()) : ?>
@@ -85,5 +85,5 @@ if ( !defined('ABSPATH')) exit;
 <?php endif; ?>  
       
         </div><!-- end of #content-full -->
-	</div><!-- end of contentbox
+	</div><!-- end of contentbox -->
 <?php get_footer(); ?>
