@@ -53,6 +53,8 @@ function sponsors_in($levels){
       }
       $output .= "<h4>".$level." ".$word."</h4>"; 
       foreach ($tops[$level] as $sponsor){
+	$url = $sponsor->url;
+	$desc = $sponsor->post_title;
 	$html = get_the_post_thumbnail(
 	       $sponsor->ID,
 	       array(75,75),
@@ -63,7 +65,7 @@ function sponsors_in($levels){
 		     'class' => $level
 		     )
 				       );
-	$output.="<div class=\"sponsor\">".$html."</div>";
+	$output.="<div class=\"sponsor\"><a description=\"".$desc."\" href=\"".$url."\">".$html."</a></div>";
       };
     };
   };
