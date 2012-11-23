@@ -2900,17 +2900,7 @@ div.homepage h3 {margin-top: 0;  }
 .sponsor img { 
      margin-top: 0;
      margin-right: 2px;
-     border-width: 4px;
-     border-style: solid;
-     border-color: green;
-     border-radius: 8px;}
-
-.sponsor img.Platinum { 
-
-                        }
-.sponsor img.Gold {
-
-}
+               }
 
 #footer div.sponsor  { display:inline; }
 #footer img {border: none; border-radius: 0; }
