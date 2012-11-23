@@ -34,9 +34,17 @@ if ( !defined('ABSPATH')) exit;
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if headline was set
 			    if ($options['home_headline']) {
-                    echo '<h1 class="featured-title">'; 
+			      /*                    echo '<h1 class="featured-title">'; 
 				    echo $options['home_headline'];
 				    echo '</h1>'; 
+			      */
+			      $imgs = "http://ma-wwwprod.lancs.ac.uk:8080/wordpress/wp-content/themes/foss4g2013/images/";
+			      echo '<div class="featured-title">';
+			      echo '<img src="'.$imgs.'emcc.jpg" />';
+			      echo '<img src="'.$imgs.'market.png" />';
+			      echo '<img src="'.$imgs.'f2f.jpg" />';
+			      echo '<img src="'.$imgs.'foss4g2013-trans-300.png" />';
+			      echo '</div>';
 			// If not display dummy headline for preview purposes
 			      } else { 
 			        echo '<h1 class="featured-title">';

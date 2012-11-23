@@ -169,7 +169,7 @@ add_filter('widget_text', 'do_shortcode');
  * Allows visitors to quickly navigate back to a previous section or the root page.
  *
  * Adopted from Dimox
- *
+ *  BUG FIX!!! Wasn't closing div tags.
  */
 function responsive_breadcrumb_lists () {
   
