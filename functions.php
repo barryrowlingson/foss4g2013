@@ -114,7 +114,7 @@ class Foss4g{
 
 function add_search_to_wp_menu ( $items, $args ) {
 $items .= '<li class="menu-item menu-item-search">';
-$items .= '<form method="get" class="menu-search-form" action="' . get_bloginfo('home') . '/"><input class="text_input" type="text" value="search" name="s" id="s" onfocus="if (this.value == \'search\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'Enter Text &amp; Click to Search\';}" /><input type="submit" class="my-wp-search" id="searchsubmit" value="Search" /></form>';
+$items .= '<form method="get" class="menu-search-form" action="' . get_bloginfo('home') . '/"><input class="text_input" type="text" value="" name="s" id="s"  /><input type="submit" class="my-wp-search" id="searchsubmit" value="Search" /></form>';
 $items .= '</li>';
 
 return $items;
