@@ -20,7 +20,9 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header(); ?>
 
-<div id="contentbox" class="grid col-460">
+<!-- default page for PAGEs -->
+
+<div id="contentbox" class="grid col-620">
   <div id="content">
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
@@ -81,6 +83,6 @@ if ( !defined('ABSPATH')) exit;
 <?php endif; ?>  
         </div><!-- end of #content -->
        </div><!-- end of #contentbox -->
-<?php get_sidebar('left'); ?>
-<?php get_sidebar('right'); ?>
+<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
