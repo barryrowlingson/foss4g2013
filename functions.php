@@ -43,7 +43,7 @@ add_shortcode("sponsorlistlevels","sponsorlist_levels");
 
 function sponsors_in($levels,$widget){
 
-  $tops = Foss4g::topsponsors();
+  $tops = Foss4g::allsponsors();
   
   $output = "";
   if($widget){
@@ -90,19 +90,20 @@ add_shortcode('sponsorlist','sponsorlist_shortcode');
 new Foss4g();
 class Foss4g{
 
-  function topsponsors(){
+  function allsponsors(){
     $levels = Conferencer::get_posts('sponsor_level');
     foreach ($levels as $id => $level) {
       $levels[$id]->sponsors = array();
     }
 
-    $tops=array("Diamond"=>array(),"Platinum"=>array(),"Gold"=>array());
+    $tops=array("Diamond"=>array(),"Platinum"=>array(),"Gold"=>array(),"Silver"=>array(),"Bronze"=>array(),"Supporter"=>array());
 
     foreach (Conferencer::get_posts('sponsor') as $sponsor) {
       Conferencer::add_meta($sponsor);
       if (array_key_exists($levels[$sponsor->level]->post_title,$tops)){
 	array_push($tops[$levels[$sponsor->level]->post_title],$sponsor);
       }
+      shuffle($tops[$levels[$sponsor->level]->post_title]);
     }
     return $tops;
   }
