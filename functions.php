@@ -61,7 +61,7 @@ function sponsors_in($levels,$widget){
       $output .= "<div class=\"level ".$level."\">";
       $output .= "<h4>".$level." ".$word."</h4>"; 
       foreach ($tops[$level] as $sponsor){
-	$url = $sponsor->url;
+	$url = get_permalink($sponsor->ID);
 	$desc = $sponsor->post_title;
 	$html = get_the_post_thumbnail(
 	       $sponsor->ID,
