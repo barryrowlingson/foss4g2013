@@ -52,6 +52,10 @@ if ( !defined('ABSPATH')) exit;
                     .'<img src="' . get_stylesheet_directory_uri() . '/icons/twitter-icon.png" width="24" height="24" alt="Twitter">'
                     .'</a></li>';
 
+      if (!empty($options['linkedin_uid'])) echo '<li class="linkedin-icon"><a href="' . $options['linkedin_uid'] . '">'
+                    .'<img src="' . get_stylesheet_directory_uri() . '/icons/linkedin-icon.png" width="24" height="24" alt="LinkedIn">'
+                    .'</a></li>';
+
                 echo '</ul><!-- end of .social-icons -->';
          ?>
 
