@@ -1212,14 +1212,16 @@ form div {
 #container {
     /* background-color: #808080; */
     background: rgba(255,255,255,0);
-	margin: 0 auto;
+    margin: 0 auto;
+
 	max-width: 960px;
 	padding: 0px 25px;
 }
 
 #wrapper {
 	background-color: transparent;
-	clear: both;
+
+        clear: both;
 	margin: 20px auto 20px auto;
 	/* padding: 0 20px 0px 20px; */
 	position: relative;
@@ -1244,6 +1246,7 @@ form div {
 	max-width: 960px;
 	padding: 0 25px 0 25px;
 	background-color: rgba(255,255,255,.88);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0FFFFFF,endColorstr=#E0FFFFFF)"; /* IE8 */
 }
 
 #footer-wrapper {
@@ -1303,8 +1306,9 @@ form div {
 /* =Content
 -------------------------------------------------------------- */
 #content {
-    background-color: white;
+   /* background-color: white; */
 background-color: rgba(255,255,255,0.9);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0FFFFFF,endColorstr=#E0FFFFFF)"; /* IE8 */	
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border: 1px solid #d6d6d6;
@@ -1317,6 +1321,7 @@ background-color: rgba(255,255,255,0.9);
 
 #content-full {  
                 background-color: rgba(255,255,255,0.9);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0FFFFFF,endColorstr=#E0FFFFFF)"; /* IE8 */	
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border: 1px solid #d6d6d6;
@@ -1326,8 +1331,10 @@ background-color: rgba(255,255,255,0.9);
 	margin-bottom: 20px;
 }
 
-#content-blog {   background-color: rgba(255,255,255,0.9);
-
+#content-blog {  
+ 
+ background-color: rgba(255,255,255,0.9);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E0FFFFFF,endColorstr=#E0FFFFFF)"; /* IE8 */	
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border: 1px solid #d6d6d6;
