@@ -48,6 +48,8 @@ function sponsors_in($levels,$widget){
   $output = "";
   if($widget){
     $output .= "<div class=\"sponsors\">";
+  }else{
+    $output .="<h4>Sponsors</h4>";
   };
   //$output .= "<div class=\"widget-title-home\"><h3>Sponsors</h3></div>";
   foreach ($levels as $level){
@@ -58,24 +60,28 @@ function sponsors_in($levels,$widget){
       }else{
 	$word="sponsor";
       }
+      if($widget){
       $output .= "<div class=\"level ".$level."\">";
       $output .= "<h4>".$level." ".$word."</h4>"; 
+      }
       foreach ($tops[$level] as $sponsor){
 	$url = get_permalink($sponsor->ID);
-	$desc = $sponsor->post_title;
+	$desc = $level." sponsor, ".$sponsor->post_title;
 	$html = get_the_post_thumbnail(
 	       $sponsor->ID,
 	       array(75,75),
 	       array(
-		     'alt' => $sponsor->post_title,
-		     'title' => $sponsor->post_title,
+		     'alt' => $desc,
+		     'title' => $desc,
 		     'style' => "display:inline",
 		     'class' => $level
 		     )
 				       );
 	$output.="<div class=\"sponsor\"><a description=\"".$desc."\" href=\"".$url."\">".$html."</a></div>";
       };
-      $output .= "</div>"; // end of level
+      if($widget){
+        $output .= "</div>"; // end of level
+      };
     };
   };
   if($widget){
