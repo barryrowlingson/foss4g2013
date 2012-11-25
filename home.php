@@ -43,7 +43,7 @@ if ( !defined('ABSPATH')) exit;
 			      echo '<img src="'.$imgs.'emcc.jpg" />';
 			      echo '<img src="'.$imgs.'market.png" />';
 			      echo '<img src="'.$imgs.'f2f.jpg" />';
-			      echo '<img src="'.$imgs.'foss4g2013-trans-300.png" />';
+			      echo '<img src="'.$imgs.'foss4g2013-white-300.png" />';
 			      echo '</div>';
 			// If not display dummy headline for preview purposes
 			      } else { 
