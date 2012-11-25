@@ -279,4 +279,54 @@ function responsive_breadcrumb_lists () {
 } 
 
 
+add_action('admin_head', 'wpse_13671_script_enqueuer');
+
+function wpse_13671_script_enqueuer() {
+    global $current_screen;
+
+    /**
+     * /wp-admin/edit.php?post_type=page
+     */
+    if('edit-page' == $current_screen->id) 
+    {
+        ?>
+        <script type="text/javascript">         
+        jQuery(document).ready( function($) {
+            $("a.editinline").live("click", function () {
+                var ilc_qe_id = inlineEditPost.getId(this);
+                setTimeout(function() {
+                        $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="sidebar-content-page.php"]').remove();  
+                        $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="sidebar-content-half-page.php"]').remove();  
+                        $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="content-sidebar-half-page.php"]').remove();  
+                    }, 100);
+            });
+
+            $('#doaction, #doaction2').live("click", function () {
+                setTimeout(function() {
+                        $('#bulk-edit select[name="page_template"] option[value="sidebar-content-page.php"]').remove();  
+                        $('#bulk-edit select[name="page_template"] option[value="sidebar-content-half-page.php"]').remove();  
+                        $('#bulk-edit select[name="page_template"] option[value="content-sidebar-half-page.php"]').remove();  
+                    }, 100);
+            });       
+        });    
+        </script>
+    <?php
+    }
+
+    /**
+     * /wp-admin/post.php?post=21&action=edit
+     */
+    if( 'page' == $current_screen->id ) 
+    {
+        ?>
+        <script type="text/javascript">
+        jQuery(document).ready( function($) {
+            $('#page_template option[value="sidebar-content-page.php"]').remove();
+            $('#page_template option[value="sidebar-content-half-page.php"]').remove();
+            $('#page_template option[value="content-sidebar-half-page.php"]').remove();
+        });
+        </script>
+    <?php
+    }
+}
 ?>
