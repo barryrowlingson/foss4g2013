@@ -33,6 +33,8 @@ if ( !defined('ABSPATH')) exit;
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h1 class="post-title"><?php the_title(); ?></h1>
 
+<?php the_post_thumbnail('single-post-thumbnail'); ?>
+
                 <div class="post-meta">
                 <?php responsive_post_meta_data(); ?>
                 
