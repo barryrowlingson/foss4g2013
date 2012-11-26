@@ -32,25 +32,15 @@ if ( !defined('ABSPATH')) exit;
         <div id="contentbox" class="grid col-460">
            <div id="featured">
             <?php $options = get_option('responsive_theme_options');
-			// First let's check if headline was set
-			    if ($options['home_headline']) {
-			      /*                    echo '<h1 class="featured-title">'; 
-				    echo $options['home_headline'];
-				    echo '</h1>'; 
-			      */
-			      $imgs = "http://ma-wwwprod.lancs.ac.uk:8080/wordpress/wp-content/themes/foss4g2013/images/";
+	
+                              $imgs = get_stylesheet_directory_uri().'/images/';
 			      echo '<div class="featured-title">';
 			      echo '<img src="'.$imgs.'emcc.jpg" />';
 			      echo '<img src="'.$imgs.'market.png" />';
 			      echo '<img src="'.$imgs.'f2f.jpg" />';
 			      echo '<img id="foss4glogo" src="'.$imgs.'foss4g2013-white-300.png" />';
 			      echo '</div>';
-			// If not display dummy headline for preview purposes
-			      } else { 
-			        echo '<h1 class="featured-title">';
-				    echo __('Hello, World!','responsive');
-				    echo '</h1>';
-				  }
+	
 			?>
                     
             <?php $options = get_option('responsive_theme_options');
@@ -88,7 +78,7 @@ if ( !defined('ABSPATH')) exit;
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if headline was set
 			    if (!empty($options['cta_url']) && $options['cta_text']) {
-					echo '<a href="'.home_url().'/about-foss4g/'.'" class="green button">'; 
+					echo '<a href="'.home_url().'/welcome/'.'" class="green button">'; 
 					echo $options['cta_text'];
 				    echo '</a>';
 			// If not display dummy headline for preview purposes
