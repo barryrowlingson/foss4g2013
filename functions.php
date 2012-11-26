@@ -278,6 +278,18 @@ function responsive_breadcrumb_lists () {
   }
 } 
 
+function remove_some_widgets(){
+
+	unregister_sidebar( 'left-sidebar-half' );
+	unregister_sidebar( 'right-sidebar-half' );
+	unregister_sidebar( 'left-sidebar' );
+	unregister_sidebar( 'right-sidebar' );
+	unregister_sidebar( 'gallery-widget' );
+	unregister_sidebar( 'colophon-widget' );
+	unregister_sidebar( 'top-widget' );
+
+}
+add_action( 'widgets_init', 'remove_some_widgets', 11 );
 
 add_action('admin_head', 'wpse_13671_script_enqueuer');
 
