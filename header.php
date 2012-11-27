@@ -72,7 +72,10 @@ if ( !defined('ABSPATH')) exit;
 					); 
 				?>
             <?php } ?>
-               
+            
+
+   <img id="printlogo" src="<?php echo get_stylesheet_directory_uri().'/images/foss4g2013-trans-200.png'; ?>" />
+
         <a href="<?php echo get_home_url(); ?> "><div id="logo">
 FOSS4G 2013 Nottingham
 </div>

@@ -1256,6 +1256,9 @@ form div {
 
 /* =Header
 -------------------------------------------------------------- */
+
+#printlogo { visibility:hidden;display:none; }
+
 #logo {
 	float: left;
 	margin: 1em;
@@ -2782,10 +2785,10 @@ BDO[DIR="rtl"] {
     If you're working on a Child Theme, make sure that all
 	media queries are included in your style.css
 -------------------------------------------------------------- */
-@media print {
+@media print  {
 
     h1 {
-	    page-break-before: always;
+	    
     }
 
     h1,  h2,  h3,  h4,  h5,  h6 {
@@ -2795,6 +2798,17 @@ BDO[DIR="rtl"] {
     ul,  ol,  dl {
 	    page-break-before: avoid;
     }
+
+  div.breadcrumb-list { display:none ;}
+  div#contentbox { width: 100%; }
+  div#widgets { display:none; }
+  ul#menu-menu { display: none; }
+
+#printlogo { visibility:visible;display:inline;float:left;width:25%;margin:0; padding:0 }
+div#logo { display:none; }
+div#blurbmain {  }
+div#blurb { padding-top: 0; margin-left: 1em; width: 100%; text-align:right}
+
 }
 
 /*	Retina (HiDPI) Display
@@ -2837,7 +2851,7 @@ BDO[DIR="rtl"] {
 */
 @media screen and (max-width: 650px) {
 
-    body {}
+    body {background-image: url(images/arrowsmall.png)}
 
     #logo {
 	    float: none;
