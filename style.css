@@ -3056,7 +3056,7 @@ div.homepage h3 {margin-top: 0;  }
      margin-right: 2px;
                }
 
-#footer div.sponsor  { display:inline; }
+#footer div.sponsor  { display:inline; margin: 12px; }
 #footer img {border: none; border-radius: 0; }
 #footer div.level { 
                     display:inline; float:left;
