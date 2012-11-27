@@ -29,22 +29,13 @@ if ( !defined('ABSPATH')) exit;
 		<?php if ($options['breadcrumb'] == 0): ?>
 		<?php echo responsive_breadcrumb_lists(); ?>
         <?php endif; ?> 
-          
+        <?php  Conferencer::add_meta($post); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <h1 class="post-title"><?php the_title(); ?></h1>
+                <h1 class="post-title"><a href="<?php echo $post->url; ?>"> <?php the_title(); ?></a></h1>
 
-<?php the_post_thumbnail('single-post-thumbnail'); ?>
+<a href="<?php echo $post->url; ?>"><?php the_post_thumbnail('single-post-thumbnail'); ?></a>
 
-                <div class="post-meta">
-                <?php responsive_post_meta_data(); ?>
-                
-				    <?php if ( comments_open() ) : ?>
-                        <span class="comments-link">
-                        <span class="mdash">&mdash;</span>
-                    <?php comments_popup_link(__('No Comments &darr;', 'responsive'), __('1 Comment &darr;', 'responsive'), __('% Comments &darr;', 'responsive')); ?>
-                        </span>
-                    <?php endif; ?> 
-                </div><!-- end of .post-meta -->
+           
                                 
                 <div class="post-entry">
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
