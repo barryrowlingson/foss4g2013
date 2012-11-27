@@ -3050,6 +3050,10 @@ div.homepage h3 {margin-top: 0;  }
     background-image: url(images/diamond1.png); 
  }
 
+.single-sponsor div.sponsor img { float:left; margin: 0; }
+
+
+
 .sponsor a {height: 75px;}
 .sponsor img { 
      margin-top: 0;
@@ -3057,7 +3061,7 @@ div.homepage h3 {margin-top: 0;  }
                }
 
 #footer div.sponsor  { display:inline; margin: 12px; }
-#footer img {border: none; border-radius: 0; }
+#footer img {border: none; border-radius: 0;float:none }
 #footer div.level { 
                     display:inline; float:left;
       border-width: 4px;
