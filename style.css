@@ -3092,6 +3092,12 @@ float: right;
 padding: 2px;
 margin-right: 0.5em;
                                        }
-
+/* social overrides */
+div#social div.social-comment-body {
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    width: auto;
+}
 
 /*The last 29 days of the month are the hardest."- Nikola Tesla*/
