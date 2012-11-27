@@ -283,7 +283,6 @@ function remove_some_widgets(){
 	unregister_sidebar( 'left-sidebar-half' );
 	unregister_sidebar( 'right-sidebar-half' );
 	unregister_sidebar( 'left-sidebar' );
-	unregister_sidebar( 'right-sidebar' );
 	unregister_sidebar( 'gallery-widget' );
 	unregister_sidebar( 'colophon-widget' );
 	unregister_sidebar( 'top-widget' );
@@ -310,6 +309,8 @@ function wpse_13671_script_enqueuer() {
                         $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="sidebar-content-page.php"]').remove();  
                         $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="sidebar-content-half-page.php"]').remove();  
                         $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="content-sidebar-half-page.php"]').remove();  
+                        $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="landing-page.php"]').remove();  
+                        $('#edit-'+ilc_qe_id+' select[name="page_template"] option[value="sitemap.php"]').remove();  
                     }, 100);
             });
 
@@ -318,6 +319,8 @@ function wpse_13671_script_enqueuer() {
                         $('#bulk-edit select[name="page_template"] option[value="sidebar-content-page.php"]').remove();  
                         $('#bulk-edit select[name="page_template"] option[value="sidebar-content-half-page.php"]').remove();  
                         $('#bulk-edit select[name="page_template"] option[value="content-sidebar-half-page.php"]').remove();  
+                        $('#bulk-edit select[name="page_template"] option[value="landing-page.php"]').remove();  
+                        $('#bulk-edit select[name="page_template"] option[value="sitemap.php"]').remove();  
                     }, 100);
             });       
         });    
@@ -336,6 +339,8 @@ function wpse_13671_script_enqueuer() {
             $('#page_template option[value="sidebar-content-page.php"]').remove();
             $('#page_template option[value="sidebar-content-half-page.php"]').remove();
             $('#page_template option[value="content-sidebar-half-page.php"]').remove();
+            $('#page_template option[value="landing-page.php"]').remove();
+            $('#page_template option[value="sitemap.php"]').remove();
         });
         </script>
     <?php

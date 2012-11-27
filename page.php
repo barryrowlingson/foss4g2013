@@ -6,6 +6,7 @@ if ( !defined('ABSPATH')) exit;
 /**
  * Pages Template
  *
+   Template Name:  Content/Main Sidebar
  *
  * @file           page.php
  * @package        Responsive 

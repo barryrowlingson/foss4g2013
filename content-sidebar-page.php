@@ -6,7 +6,7 @@ if ( !defined('ABSPATH')) exit;
 /**
  * Content/Sidebar Template
  *
-   Template Name:  Content/Sidebar
+   Template Name:  Content/Thin Right Sidebar
  *
  * @file           content-sidebar-page.php
  * @package        Responsive 
