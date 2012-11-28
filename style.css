@@ -3040,8 +3040,8 @@ div#featured-one {position: static !important;}
 
 /* homepage rearrange */
 
-div#contentbox {margin-left: 25%}
-div#featured-one {left:0; position:absolute}
+.home div#contentbox {margin-left: 25%}
+.home div#featured-one {left:0; position:absolute}
 
 
 /* sponsor block styling */
