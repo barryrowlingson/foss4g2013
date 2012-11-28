@@ -23,9 +23,6 @@ if ( !defined('ABSPATH')) exit;
 ?>
 <?php get_header("notop"); ?>
 
-	<div id="featured-one" class="grid col-220" >
-            <?php dynamic_sidebar( 'lefthome' ); ?>
-	</div>
 
 
 
@@ -93,6 +90,10 @@ if ( !defined('ABSPATH')) exit;
             <?php endif; ?>         
           </div>
         </div><!-- end of .col-460 -->
+
+	<div id="featured-one" class="grid col-220" >
+            <?php dynamic_sidebar( 'lefthome' ); ?>
+	</div>
 
         <div id="featured-two" class="grid col-220 fit" > 
 			      <?php dynamic_sidebar( 'righthome' ); ?>        

@@ -2864,6 +2864,8 @@ div#blurb { padding-top: 0; margin-left: 1em; width: 100%; text-align:right}
 	    float: none;
     }
 
+div#featured-one {position: static !important;}
+
 	#featured-image .fluid-width-video-wrapper {
 	    margin: 20px 0 0 0;
     }
@@ -3035,6 +3037,12 @@ div#blurb { padding-top: 0; margin-left: 1em; width: 100%; text-align:right}
         text-align: center;
     }
 }
+
+/* homepage rearrange */
+
+div#contentbox {margin-left: 25%}
+div#featured-one {left:0; position:absolute}
+
 
 /* sponsor block styling */
 
