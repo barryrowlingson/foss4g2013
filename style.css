@@ -1387,6 +1387,9 @@ background-color: rgba(255,255,255,0.9);
 
 .page {}
 
+.page h2 { margin-bottom: 0.25em; }
+.page p { margin-top: 0px }
+
 /* =Templates (Landing Page)
 -------------------------------------------------------------- */
 .page-template-landing-page-php .menu, 
