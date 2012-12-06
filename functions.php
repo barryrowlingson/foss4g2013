@@ -122,7 +122,8 @@ class Foss4g{
 function add_search_to_wp_menu ( $items, $args ) {
   //  $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-999" id="menu-item-999"><form style="margin:0"><input type="text" style="height: 1em"/></form></li>';
 $items .= '<li class="menu-item menu-item-search">';
-$items .= '<form method="get" class="menu-search-form" action="' . get_bloginfo('home') . '/"><input class="text_input" type="text" value="" name="s" id="s"  /><input type="submit" class="my-wp-search" id="searchsubmit" value="Search" /></form>';
+$items .= '<form method="get" class="menu-search-form" action="' . get_bloginfo('home') . '/"><input class="text_input" type="text" value="Search..." name="s" id="s" onfocus="if (this.value == \'Search...\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'Search...\';}" /><input type="submit" class="my-wp-search" id="searchsubmit" value="Go" /></form>';
+//$items .= '<form method="get" class="menu-search-form" action="' . get_bloginfo('home') . '/"><input class="text_input" type="text" value="" name="s" id="s"  /><input type="submit" class="my-wp-search" id="searchsubmit" value="Search" /></form>';
 $items .= '</li>';
 
 return $items;
