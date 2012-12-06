@@ -179,7 +179,7 @@ add_filter('widget_text', 'do_shortcode');
  * Adopted from Dimox
  *  BUG FIX!!! Wasn't closing div tags.
  */
-function responsive_breadcrumb_lists () {
+function xresponsive_breadcrumb_lists () {
   
   $chevron = '<span class="chevron">&#8250;</span>';
   $home = __('Home','responsive'); // text for the 'Home' link
