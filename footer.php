@@ -75,7 +75,7 @@ if ( !defined('ABSPATH')) exit;
         <div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
         
         <div class="grid col-300 fit powered">
-		  FOSS4G2013 Theme (based on 'Responsive') by Barry Rowlingson, Logo by Naomi Gale.
+		  FOSS4G2013 Theme (based on 'Responsive') by Barry&nbsp;Rowlingson, Logo by Naomi&nbsp;Gale.
         </div><!-- end .powered -->
         
     </div><!-- end #footer-wrapper -->
