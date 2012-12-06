@@ -20,6 +20,7 @@ if ( !defined('ABSPATH')) exit;
  * @link           http://codex.wordpress.org/Template_Hierarchy
  * @since          available since Release 1.0
  */
+
 ?>
 <?php get_header("notop"); ?>
 
@@ -39,7 +40,10 @@ if ( !defined('ABSPATH')) exit;
 			      echo '</div>';
 	
 			?>
-                    
+    <?php
+      wp_enqueue_script('animatefeature',get_stylesheet_directory_uri().'/js/animate.js');            
+
+?>                
             <?php $options = get_option('responsive_theme_options');
 			// First let's check if headline was set
 			    if ($options['home_subheadline']) {
