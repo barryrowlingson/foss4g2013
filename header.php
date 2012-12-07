@@ -81,7 +81,7 @@ FOSS4G 2013 Nottingham
 </div>
 <div id="blurb">
 <div id="blurbmain">Free and Open Source Software for Geospatial</div>
-<div id="blurbsub">East Midlands Conference Centre, Nottingham, UK, 17th - 20th September</div>
+<div id="blurbsub">East Midlands Conference Centre, Nottingham, UK, 17th - 21st September</div>
 </div></a>
 
     </div><!-- end of #header -->
