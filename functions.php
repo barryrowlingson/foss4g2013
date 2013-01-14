@@ -69,7 +69,7 @@ function sponsors_in($levels,$widget){
 	$desc = $level." sponsor, ".$sponsor->post_title;
 	$html = get_the_post_thumbnail(
 	       $sponsor->ID,
-	       array(75,75),
+	       "full",
 	       array(
 		     'alt' => $desc,
 		     'title' => $desc,

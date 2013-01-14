@@ -2943,6 +2943,7 @@ div.homepage h3 {margin-top: 0;  }
 .sponsor img { 
      margin-top: 0;
      margin-right: 2px;
+     max-width: 150px;
                }
 
 #footer div.sponsor  { display:inline; margin: 12px; }
