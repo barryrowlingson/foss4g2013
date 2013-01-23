@@ -102,7 +102,7 @@ class Foss4g{
       $levels[$id]->sponsors = array();
     }
 
-    $tops=array("Diamond"=>array(),"Platinum"=>array(),"Gold"=>array(),"Silver"=>array(),"Bronze"=>array(),"Supporter"=>array());
+    $tops=array("Diamond"=>array(),"Platinum"=>array(),"Gold"=>array(),"Silver"=>array(),"Bronze"=>array(),"Supporter"=>array(), "Media"=>array());
 
     foreach (Conferencer::get_posts('sponsor') as $sponsor) {
       Conferencer::add_meta($sponsor);

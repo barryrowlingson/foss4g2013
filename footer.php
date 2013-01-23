@@ -27,8 +27,10 @@ if ( !defined('ABSPATH')) exit;
     <div id="footer-wrapper">
  
 <div class="grid col-940" >
-
-<?php echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum,Gold,Silver,Bronze,Supporter widget=No]'); ?>
+   <?php if ( !array_key_exists('isSponsorlist', $GLOBALS) ) {
+ echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum,Gold,Silver,Bronze,Supporter,Media widget=No]'); 
+  };
+?>
 
 </div>
    

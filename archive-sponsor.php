@@ -15,6 +15,8 @@ if ( !defined('ABSPATH')) exit;
  * @version        Release: 1.0
  * @since          available since Release 1.0
  */
+$GLOBALS[ 'isSponsorlist' ] = 1;
+
 ?>
 <?php get_header(); ?>
 
@@ -24,6 +26,11 @@ if ( !defined('ABSPATH')) exit;
 <?php 
 echo sponsors_in(explode(",","Diamond,Platinum,Gold,Silver,Bronze,Supporter"),True);
 ?>
+<h1>Our Media Partners</h1>
+<?php 
+echo sponsors_in(explode(",","Media"),True);
+?>
+
 </div>
 </div>
 
