@@ -28,11 +28,18 @@ if ( !defined('ABSPATH')) exit;
  
 <div class="grid col-940" >
    <?php if ( !array_key_exists('isSponsorlist', $GLOBALS) ) {
- echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum,Gold,Silver,Bronze,Supporter,Media widget=No]'); 
+ echo do_shortcode('[sponsorlistlevels levels=Diamond,Platinum,Gold,Silver,Bronze,Supporter widget=No]'); 
   };
 ?>
-
 </div>
+
+<div class="grid col-940">
+   <?php if ( !array_key_exists('isSponsorlist', $GLOBALS) ) {
+ echo do_shortcode('[sponsorlistlevels levels=Media widget=No heading="Media Partners"]'); 
+  };
+?>
+</div>
+
    
         <div class="grid col-940">
         

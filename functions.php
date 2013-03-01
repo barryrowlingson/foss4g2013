@@ -30,6 +30,7 @@ function sponsorlist_levels($atts,$content=null){
   extract( shortcode_atts( array(
 				 'levels' => 'Diamond,Platinum,Gold',
 				 'widget' => 'Yes',
+                                 'heading' => 'Sponsors',
 				 ), $atts ) );
   $levels = explode(",",$levels);
   if($widget=="Yes"){
@@ -37,11 +38,11 @@ function sponsorlist_levels($atts,$content=null){
   }else{
     $widget=False;
   };
-  return sponsors_in($levels,$widget);
+  return sponsors_in($levels,$widget,$heading);
 }
 add_shortcode("sponsorlistlevels","sponsorlist_levels");
 
-function sponsors_in($levels,$widget){
+function sponsors_in($levels,$widget,$heading){
 
   $tops = Foss4g::allsponsors();
   
@@ -49,7 +50,7 @@ function sponsors_in($levels,$widget){
   if($widget){
     $output .= "<div class=\"sponsors\">";
   }else{
-    $output .="<h4>Sponsors</h4>";
+    $output .="<h4>".$heading."</h4>";
   };
   //$output .= "<div class=\"widget-title-home\"><h3>Sponsors</h3></div>";
   foreach ($levels as $level){
