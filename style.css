@@ -1396,9 +1396,12 @@ background-color: rgba(255,255,255,0.9);
 .page-template-landing-page-php .top-menu,
 .page-template-landing-page-php .tinymenu,
 .page-template-landing-page-php .footer-menu, 
+.page-template-landing-page-php .sb-holder ,
 .page-template-landing-page-php .sub-header-menu {
 	display: none;
 }
+
+.sb-holder { display:none; }
 
 /* =Author Meta (Author's Box)
 -------------------------------------------------------------- */
@@ -2770,7 +2773,7 @@ div#featured-one {position: static !important;}
         font-size: 11px;
 	    text-align: center;
     }
-	
+.sb-holder { display:block; }	
 	.tinynav { 
 	    display: block;
 		margin: 0 auto;
